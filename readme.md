@@ -24,6 +24,8 @@ A binary will be produced to the `./target/debug` directory.
 cargo check
 ```
 
+No binary will be produced.
+
 ## Building the app (production version)
 
 ```bash

@@ -33,3 +33,23 @@ cargo build --release
 ```
 
 A binary will be produced to the `./target/release` directory.
+
+## Cargo init a new project
+
+```bash
+cargo new [app_name]
+```
+
+Creates `src/main.rs` and `Cargo.toml` files. If you're not already within a Git folder, a `.gitignore` file and an empty `.git/` directory will be created.
+
+When within a Git folder and you want your new Cargo project to be version-controlled, run `cargo new --vcs git [app_name]` .
+
+## Cargo init an empty project directory
+
+```bash
+cargo init
+```
+
+Creates `src/main.rs` and `Cargo.toml` files. If you're not already within a Git folder, a `.gitignore` file and an empty `.git/` directory will be created.
+
+When within a Git folder and you want your new Cargo project to be version-controlled, run `cargo init --vcs git` .

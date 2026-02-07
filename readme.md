@@ -65,7 +65,8 @@ https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-
 Tuple structs' values are accessed like
 `example.[1]` .
 https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-different-types-with-tuple-structs
-For example:
+Also, you must specify the struct name
+when destructuring a tuple struct.
 `let Point(x, y, z) = origin;`
 Destructuring a tuple would be like:
 `let (x, y) = example`

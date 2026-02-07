@@ -62,7 +62,7 @@ struct 2. Struct values not moved stay
 where they were.
 https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-with-struct-update-syntax
 
-Tuple structs' values are access like
+Tuple structs' values are accessed like
 `example.[1]` .
 https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-different-types-with-tuple-structs
 For example:

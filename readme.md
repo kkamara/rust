@@ -57,5 +57,5 @@ When within a Git folder and you want your new Cargo project to be version-contr
 ## Notes
 
 ```
-Struct values move from struct 1 to struct 2. Structs not moved stay where they were. https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-with-struct-update-syntax
+Struct values move from struct 1 to struct 2. Struct values not moved stay where they were. https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-with-struct-update-syntax
 ```

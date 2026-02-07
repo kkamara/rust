@@ -53,3 +53,9 @@ cargo init
 Creates `src/main.rs` and `Cargo.toml` files. If you're not already within a Git folder, a `.gitignore` file and an empty `.git/` directory will be created.
 
 When within a Git folder and you want your new Cargo project to be version-controlled, run `cargo init --vcs git` .
+
+## Notes
+
+```
+Struct values move from struct 1 to struct 2. Structs not moved stay where they were. https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-with-struct-update-syntax
+```

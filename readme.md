@@ -2,6 +2,24 @@
 
 This repository follows the Rust Foundation's book The Rust Programming Language at https://doc.rust-lang.org/book .
 
+## Notes
+
+```
+Struct values move from struct 1 to 
+struct 2. Struct values not moved stay
+where they were.
+https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-with-struct-update-syntax
+
+Tuple structs' values are accessed like
+`example.[1]` .
+https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-different-types-with-tuple-structs
+Also, you must specify the struct name
+when destructuring a tuple struct.
+`let Point(x, y, z) = origin;`
+Destructuring a tuple would be like:
+`let (x, y) = example`
+```
+
 ## Running the app
 
 ```bash
@@ -53,21 +71,3 @@ cargo init
 Creates `src/main.rs` and `Cargo.toml` files. If you're not already within a Git folder, a `.gitignore` file and an empty `.git/` directory will be created.
 
 When within a Git folder and you want your new Cargo project to be version-controlled, run `cargo init --vcs git` .
-
-## Notes
-
-```
-Struct values move from struct 1 to 
-struct 2. Struct values not moved stay
-where they were.
-https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-with-struct-update-syntax
-
-Tuple structs' values are accessed like
-`example.[1]` .
-https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-different-types-with-tuple-structs
-Also, you must specify the struct name
-when destructuring a tuple struct.
-`let Point(x, y, z) = origin;`
-Destructuring a tuple would be like:
-`let (x, y) = example`
-```

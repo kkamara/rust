@@ -19,6 +19,17 @@ when destructuring a tuple struct.
 `let Point(x, y, z) = origin;`
 Destructuring a tuple would be like:
 `let (x, y) = example;`
+
+There are no null values or null pointers in safe Rust.
+
+...[with the Option Enum] you have to 
+convert an Option<T> to a T before you can 
+perform T operations with it. Generally,
+this helps catch one of the most common
+issues with null: assuming that something
+isn’t null when it actually is.
+https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html#the-option-enum
+https://doc.rust-lang.org/std/option/enum.Option.html
 ```
 
 ## Running the app

@@ -18,7 +18,7 @@ Also, you must specify the struct name
 when destructuring a tuple struct.
 `let Point(x, y, z) = origin;`
 Destructuring a tuple would be like:
-`let (x, y) = example`
+`let (x, y) = example;`
 ```
 
 ## Running the app

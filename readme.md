@@ -12,6 +12,7 @@ https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-
 
 Tuple structs' values are accessed like
 `example.[1]` .
+Tuples are also accessed like this.
 https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-different-types-with-tuple-structs
 Also, you must specify the struct name
 when destructuring a tuple struct.

@@ -68,6 +68,15 @@ fn main() {
             )
         )
     );
+
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+    // The following println!s will
+    // error without the debugging
+    // print {:?} e.g. {} will error.
+    println!("five: {:?}", five);
+    println!("none: {:?}", none);
 }
 
 fn value_in_cents(coin: Coin) -> u8 {
@@ -85,5 +94,12 @@ fn value_in_cents(coin: Coin) -> u8 {
             );
             25
         },
+    }
+}
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(1 + i),
     }
 }

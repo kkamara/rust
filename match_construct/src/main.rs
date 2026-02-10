@@ -103,3 +103,12 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
         Some(i) => Some(1 + i),
     }
 }
+
+// The arms’ patterns must cover all
+// possibilities.
+// The following code will error.
+// fn plus_one(x: Option<i32>) -> Option<i32> {
+//     match x {
+//         Some(i) => Some(i + 1),
+//     }
+// }

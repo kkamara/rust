@@ -14,4 +14,6 @@ fn main() {
     // let Coin::Quarter(state) = coin else {
     //     return None;
     // };
+    // For a working let...else example,
+    // see project match_construct.
 }

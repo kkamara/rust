@@ -8,4 +8,10 @@ fn main() {
     if let Some(max) = config_max { // It can't be `config_max = Some(max)` .
         println!("The maximum is configured to be {}", max);
     }
+
+    // A let...else example from within
+    // a function or method.
+    // let Coin::Quarter(state) = coin else {
+    //     return None;
+    // };
 }

@@ -30,6 +30,27 @@ issues with null: assuming that something
 isn’t null when it actually is.
 https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html#the-option-enum
 https://doc.rust-lang.org/std/option/enum.Option.html
+
+`src/main.rs` and `src/lib.rs` are
+called crate roots.
+The reason for their name is that the
+contents of either of these two files
+form a module named crate at the root
+of the crate’s module structure, known
+as the module tree.
+crate
+ └── front_of_house
+     ├── hosting
+     │   ├── add_to_waitlist
+     │   └── seat_at_table
+     └── serving
+         ├── take_order
+         ├── serve_order
+         └── take_payment
+Notice that the entire module tree is
+rooted under the implicit module named
+crate.
+https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html#grouping-related-code-in-modules
 ```
 
 ## Running the app

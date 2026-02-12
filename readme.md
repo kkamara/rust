@@ -83,3 +83,9 @@ cargo init
 Creates `src/main.rs` and `Cargo.toml` files. If you're not already within a Git folder, a `.gitignore` file and an empty `.git/` directory will be created.
 
 When within a Git folder and you want your new Cargo project to be version-controlled, run `cargo init --vcs git` .
+
+## Create a library
+
+```bash
+cargo new --lib [package-name]
+```

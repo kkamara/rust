@@ -53,6 +53,13 @@ fn main() {
 
     //  cannot use the `?` operator in a function that returns `()`
     // let greeting_file = File::open("hello.txt")?;
+
+    /*
+        Note that you can use the ? operator on a Result
+        in a function that returns Result, and you can
+        use the ? operator on an Option in a function
+        that returns Option, but you can’t mix and match.
+     */
 }
 
 fn read_username_from_file() -> Result<String, io::Error> {

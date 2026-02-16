@@ -2,6 +2,12 @@ use std::cmp::Ordering;
 use std::io;
 use rand::Rng;
 
+/*
+    This program doesn't validate whether
+    the guess is between 1 and 100.
+     https://doc.rust-lang.org/book/ch09-03-to-panic-or-not-to-panic.html#custom-types-for-validation
+*/
+
 fn main() {
     println!("Guess the number!");
 

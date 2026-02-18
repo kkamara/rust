@@ -1,5 +1,18 @@
 use std::fmt::Formatter;
 
+pub struct SocialPost {
+    pub username: String,
+    pub content: String,
+    pub reply: bool,
+    pub repost: bool,
+}
+
+impl Summary for SocialPost {
+    fn summarize(&self) -> String {
+        format!("{}: {}", self.username, self.content)
+    }
+}
+
 pub trait Summary {
     fn summarize(&self) -> String;
 }
@@ -43,7 +56,21 @@ where
 {
     1
 }
+// Return a value of some type that
+// implements a trait.
+fn returns_summarizable() -> impl Summary {
+    SocialPost {
+        username: String::from("horse_ebooks"),
+        content: String::from(
+            "of course, as you probably already know, people",
+        ),
+        reply: false,
+        repost: false,
+    }
+}
 
 fn main() {
     println!("Hello, world!");
 }
+
+

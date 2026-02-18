@@ -58,6 +58,9 @@ where
 }
 // Return a value of some type that
 // implements a trait.
+// You can only use impl Trait if
+// you’re returning a single type.
+//  https://doc.rust-lang.org/book/ch10-02-traits.html#returning-types-that-implement-traits
 fn returns_summarizable() -> impl Summary {
     SocialPost {
         username: String::from("horse_ebooks"),

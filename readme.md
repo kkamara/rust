@@ -51,6 +51,25 @@ Notice that the entire module tree is
 rooted under the implicit module named
 crate.
 https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html#grouping-related-code-in-modules
+
+When to use self (The Instance)
+Use lowercase self as the first parameter
+of a method when you want to call that
+method on an instance of the struct (e.g.,
+my_struct.do_something()). There are three
+primary forms: 
+- &self (Immutable Borrow): Use this most
+of the time. It allows the method to read
+data from the struct without taking
+ownership or changing anything.
+- &mut self (Mutable Borrow): Use this
+when the method needs to modify the
+struct's fields.
+- self (Taking Ownership): Use this when
+the method needs to "consume" the struct,
+such as transforming it into another type
+or dropping it after use.
+Google Gemini AI.
 ```
 
 ## Running the app

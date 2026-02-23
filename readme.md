@@ -74,6 +74,9 @@ Google Gemini AI.
 Monomorphization: the process of
 converting generics into concrete
 types at compile time, in Rust.
+
+Common generics: Result<T, E> and
+Option<T> .
 ```
 
 ## Running the app

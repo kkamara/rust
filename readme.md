@@ -70,6 +70,10 @@ the method needs to "consume" the struct,
 such as transforming it into another type
 or dropping it after use.
 Google Gemini AI.
+
+Monomorphization: the process of
+converting generics into concrete
+types at compile time, in Rust.
 ```
 
 ## Running the app

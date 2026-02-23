@@ -89,6 +89,8 @@ be dropped immediately after the function
 finishes, while the returned Vec can still
 be used as long as contents is still around.
 Google Gemini AI.
+
+unimplemented!()
 ```
 
 ## Running the app

@@ -51,6 +51,7 @@ Notice that the entire module tree is
 rooted under the implicit module named
 crate.
 https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html#grouping-related-code-in-modules
+See restaurant project for application.
 
 When to use self (The Instance)
 Use lowercase self as the first parameter

@@ -90,7 +90,7 @@ finishes, while the returned Vec can still
 be used as long as contents is still around.
 Google Gemini AI.
 
-unimplemented!()
+`unimplemented!();`
 ```
 
 ## Running the app

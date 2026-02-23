@@ -77,6 +77,9 @@ types at compile time, in Rust.
 
 Common generics: Result<T, E> and
 Option<T> .
+
+In Rust, Option<T> is an enum used to represent a value that may or may not be present. It has two variants: Some(T) (contains a value) and None (empty).
+Google Gemini AI.
 ```
 
 ## Running the app

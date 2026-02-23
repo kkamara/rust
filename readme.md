@@ -91,6 +91,11 @@ be used as long as contents is still around.
 Google Gemini AI.
 
 `unimplemented!();`
+
+Tests run in parallel by default. We can
+ensure single threaded testing with
+`cargo test -- --test-threads=1`
+which is useful when tests share state.
 ```
 
 ## Running the app

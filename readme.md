@@ -78,7 +78,10 @@ types at compile time, in Rust.
 Common generics: Result<T, E> and
 Option<T> .
 
-In Rust, Option<T> is an enum used to represent a value that may or may not be present. It has two variants: Some(T) (contains a value) and None (empty).
+In Rust, Option<T> is an enum used to represent
+a value that may or may not be present. It has
+two variants: Some(T) (contains a value) and
+None (empty).
 
 `pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str>`
 query is implicitly a lifetime of type 'b.

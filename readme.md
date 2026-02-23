@@ -83,7 +83,7 @@ In Rust, Option<T> is an enum used to represent a value that may or may not be p
 `pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str>`
 query is implicitly a lifetime of type 'b.
 Google Gemini AI confirmed this, my explanation,
-is exactly the case.
+is "exactly" the case.
 Flexibility: You allow the query string to
 be dropped immediately after the function
 finishes, while the returned Vec can still

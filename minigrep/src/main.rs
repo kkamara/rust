@@ -3,8 +3,11 @@ use std::fs;
 use std::process;
 use std::error::Error;
 use minigrep::search;
+use std::time::Instant;
 
 fn main() {
+    let now = Instant::now();
+
     let args: Vec<String> = env::args()
         .collect();
     // dbg!(args); // Prints the value of args to the console for debugging purposes.
@@ -23,6 +26,9 @@ fn main() {
         println!("Application error: {e}");
         process::exit(1);
     }
+
+    let elapsed = now.elapsed();
+    println!("Execution time: {elapsed:.2?}");
 }
 
 struct Config {
@@ -43,7 +49,9 @@ impl Config {
 }
 
 fn run(config: Config) -> Result<(), Box<dyn Error>> {
-    let contents = fs::read_to_string(config.file_path)?;
+    let contents = fs::read_to_string(
+        config.file_path
+    )?;
 
     for line in search(&config.query, &contents) {
         println!("{line}");

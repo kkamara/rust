@@ -100,6 +100,20 @@ Tests run in parallel by default. We can
 ensure single threaded testing with
 `cargo test -- --test-threads=1`
 which is useful when tests share state.
+
+Explaining ownership and borrowing rules
+to my non-technical friend (1):
+When you pass a variable to another part of
+the code, a function, you can change
+ownership of the variable to the function,
+or you can make the function borrow the
+variable.
+
+Explaining ownership and borrowing rules
+to my non-technical friend (2) (improved):
+You change which part of the code OWNS a
+variable. Or you let other parts of the
+code BORROW a variable.
 ```
 
 ## Running the app

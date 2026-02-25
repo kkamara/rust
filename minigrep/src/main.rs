@@ -67,15 +67,15 @@ fn run(config: Config) -> Result<(), Box<dyn Error>> {
         config.file_path
     )?;
 
-    let results = if config.ignore_case {
-        search_case_insensitive(&config.query, &contents)
+    if config.ignore_case {
+        for line in search_case_insensitive(&config.query, &contents) {
+            println!("{line}");
+        }
     } else {
-        search(&config.query, &contents)
+        for line in search(&config.query, &contents) {
+            println!("{line}");
+        }
     };
-
-    for line in results {
-        println!("{line}");
-    }
 
     Ok(())
 }

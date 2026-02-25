@@ -11,26 +11,24 @@ be connected to the return value using the lifetime
 syntax.
     https://doc.rust-lang.org/stable/book/ch12-04-testing-the-librarys-functionality.html#writing-a-failing-test
 */
-pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+pub fn search<'a>(query: &str, contents: &'a str) -> impl Iterator<Item = &'a str> {
     contents
         .lines()
-        .filter(|line| line.contains(query))
-        .collect()
+        .filter(move |line| line.contains(query))
 }
 
 pub fn search_case_insensitive<'a>(
     query: &str,
     contents: &'a str
-) -> Vec<&'a str> {
+) -> impl Iterator<Item = &'a str> {
     let query = query.to_lowercase();
     contents
         .lines()
         .filter(
-            |line| line
+            move |line| line
                 .to_lowercase()
                 .contains(&query)
         )
-        .collect()
 }
 
 #[cfg(test)]
@@ -48,7 +46,7 @@ Duct tape.";
 
         assert_eq!(
             vec!["safe, fast, productive."],
-            search(query, contents)
+            search(query, contents).collect::<Vec<&str>>()
         );
     }
 
@@ -63,7 +61,7 @@ Trust me.";
 
         assert_eq!(
             vec!["Rust:", "Trust me."],
-            search_case_insensitive(query, contents)
+            search_case_insensitive(query, contents).collect::<Vec<&str>>()
         );
     }
 }

@@ -12,7 +12,7 @@ fn main() {
         .collect();
     // dbg!(args); // Prints the value of args to the console for debugging purposes.
 
-    let config = Config::build(&args)
+    let config = Config::build(env::args())
         .unwrap_or_else(|err| {
             // Problem parsing arguments: not enough arguments
             eprintln!("Problem parsing arguments: {err}");
@@ -38,12 +38,20 @@ pub struct Config {
 }
 
 impl Config {
-    fn build(args: &[String]) -> Result<Config, &'static str> {
-        if 3 > args.len() {
-            return Err("Not enough arguments.");
-        }
-        let query = args[1].clone();
-        let file_path = args[2].clone();
+    fn build(
+        mut args: impl Iterator<Item = String>
+    ) -> Result<Config, &'static str> {
+        args.next();
+
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a query string")
+        };
+
+        let file_path =match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a file path")
+        };
 
         let ignore_case = env::var(
             "IGNORE_CASE"

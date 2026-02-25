@@ -7,9 +7,6 @@ use std::time::Instant;
 
 fn main() {
     let now = Instant::now();
-
-    let args: Vec<String> = env::args()
-        .collect();
     // dbg!(args); // Prints the value of args to the console for debugging purposes.
 
     let config = Config::build(env::args())

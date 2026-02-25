@@ -1,0 +1,12 @@
+[profile.dev]
+opt-level = 0 # default is 0, but we set it explicitly to make it clear that we want no optimizations in dev mode
+
+[profile.release]
+opt-level = 3 # default is 3, but we set it explicitly to make it clear that we want maximum optimizations in release mode
+
+[package]
+name = "my_crate"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

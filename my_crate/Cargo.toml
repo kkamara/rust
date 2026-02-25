@@ -10,5 +10,6 @@ version = "0.1.0"
 edition = "2024"
 license = "BSD-3-Clause" # add license field
 description = "My app description." # add description field
+repository = "https://github.com/kkamara/rust" # add optional repository field
 
 [dependencies]

@@ -114,6 +114,11 @@ to my non-technical friend (2) (improved):
 You change which part of the code OWNS a
 variable. Or you let other parts of the
 code BORROW a variable.
+
+Helpful macros:
+`unimplemented!();`
+`todo!();`
+`unreachable!();`
 ```
 
 ## Running the app

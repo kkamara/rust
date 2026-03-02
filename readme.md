@@ -121,6 +121,7 @@ Helpful macros:
 `unreachable!();`
 
 `Box<T>` copies values onto the heap.
+See project my_box.
 ```
 
 ## Running the app

@@ -119,6 +119,8 @@ Helpful macros:
 `unimplemented!();`
 `todo!();`
 `unreachable!();`
+
+`Box<T>` copies values onto the heap.
 ```
 
 ## Running the app

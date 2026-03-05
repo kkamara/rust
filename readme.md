@@ -122,6 +122,10 @@ Helpful macros:
 
 `Box<T>` copies values onto the heap.
 See project my_box.
+Also do this (above line) for implementing
+the Deref trait (deref drop function): for
+deciding what happens when the type is
+cleaned up (dropped from memory).
 ```
 
 ## Running the app

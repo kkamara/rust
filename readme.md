@@ -126,6 +126,12 @@ Also do this (above line) for implementing
 the Deref trait (deref drop function): for
 deciding what happens when the type is
 cleaned up (dropped from memory).
+
+For concurrency related projects, see:
+- threads
+- channels
+- mutex
+- mutex_2
 ```
 
 ## Running the app

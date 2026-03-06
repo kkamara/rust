@@ -135,6 +135,8 @@ For concurrency related projects, see:
 - hello-async
 - hello (practical and last project of the
   course)
+
+I completed the Rust book in 30 days.
 ```
 
 ## Running the app

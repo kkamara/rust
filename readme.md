@@ -132,6 +132,7 @@ For concurrency related projects, see:
 - channels
 - mutex
 - mutex_2
+- hello-async
 ```
 
 ## Running the app

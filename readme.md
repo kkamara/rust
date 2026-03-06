@@ -133,6 +133,8 @@ For concurrency related projects, see:
 - mutex
 - mutex_2
 - hello-async
+- hello (practical and last project of the
+  course)
 ```
 
 ## Running the app

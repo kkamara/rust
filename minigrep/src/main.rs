@@ -25,7 +25,7 @@ fn main() {
     }
 
     let elapsed = now.elapsed();
-    println!("Execution time: {elapsed:.2?}");
+    println!("Execution time: {}ms", elapsed.as_millis());
 }
 
 pub struct Config {

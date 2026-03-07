@@ -52,7 +52,7 @@ impl Config {
 
         let ignore_case = env::var(
             "IGNORE_CASE"
-        ).is_ok();
+        ).is_ok_and(|s| "1" == s);
 
         Ok(Config {
             query,
